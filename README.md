@@ -3,11 +3,12 @@
 
 # Code Forces
 
-## Solved Problems - 3
+## Solved Problems - 4
 
 * [Watermelon (4A)](https://codeforces.com/problemset/problem/4/A)  ✅
 * [Petya and Strings (112A)](https://codeforces.com/problemset/problem/112/A)  ✅
 * [Bit++ (282A)](https://codeforces.com/problemset/problem/282/A)  ✅
+* [Elephant (617A)](https://codeforces.com/problemset/problem/617/A)  ✅
 
 
 ## License
