@@ -1,0 +1,19 @@
+class Solution${problem_id}:
+    def __init__(self):
+        self.result = ''
+
+    def parse_input(self):
+        pass
+
+    def solve(self):
+        pass
+
+    def get_result(self):
+        return self.result
+
+
+if __name__ == "__main__":
+    solution = Solution${problem_id}()
+    solution.parse_input()
+    solution.solve()
+    print(solution.get_result())
