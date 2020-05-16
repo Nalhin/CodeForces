@@ -4,7 +4,7 @@ from unittest.mock import patch
 from .solution_4A import Solution4A
 
 
-class Solution4ATest(unittest.TestCase):
+class TestSolution4A(unittest.TestCase):
     def setUp(self):
         self.solution = Solution4A()
 

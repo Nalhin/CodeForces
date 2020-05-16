@@ -4,14 +4,14 @@ from unittest.mock import patch
 from .solution_${problem_id} import Solution${problem_id}
 
 
-class Solution${problem_id}Test(unittest.TestCase):
+class TestSolution${problem_id}(unittest.TestCase):
     def setUp(self):
         self.solution = Solution${problem_id}()
-    % for example in examples:
+    % for test in tests:
 
-    def test_${problem_id}_acceptance_${example.id}(self):
-        mock_input = ${example.mock_input}
-        expected = '${example.expected}'
+    def test_${problem_id}_acceptance_${test.id}(self):
+        mock_input = ${test.mock_input}
+        expected = '${test.expected}'
 
         with patch('builtins.input', side_effect=mock_input):
             self.solution.parse_input()

@@ -19,19 +19,12 @@ class Problem:
         self.expected = expected
 
 
-def parse_html_pre(pre):
-    lines = pre.split("\n")
-    return lines if len(lines) <= 1 else pre.split("\n")[1:-1]
-
-
 def parse_data(html_markdown):
     q = pq(html_markdown.text)
     tests = q(".sample-tests")
-
-    inputs = [parse_html_pre(i.text) for i in tests(".input pre")]
-    results = [parse_html_pre(i.text) for i in tests(".output pre")]
-
-    return [Problem(i + 1, input, "/n".join(result)) for i, (input, result) in
+    inputs = [i("pre").text() for i in tests.items(".input")]
+    results = [i("pre").text() for i in tests.items(".output")]
+    return [Problem(i + 1, str(input.split("\n")), result) for i, (input, result) in
             enumerate(zip(inputs, results))]
 
 
@@ -59,7 +52,11 @@ def save_problem(problem_path, problem_id):
 def save_test(base_path, data, problem_id):
     test_file = os.path.join(base_path, f"test_solution_{problem_id}.py")
     tf = open(test_file, "w")
-    tf.write(TEST_TEMPLATE_PATH.render(problem_id=problem_id, examples=data))
+    for d in data:
+        print(d.id)
+        print(d.expected)
+        print(d.mock_input)
+    tf.write(TEST_TEMPLATE_PATH.render(problem_id=problem_id, tests=data))
     tf.close()
 
 

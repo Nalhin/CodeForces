@@ -3,9 +3,11 @@
 
 # Code Forces
 
-## Solved Problems - 1
+## Solved Problems - 2
 
 * [Watermelon (4A)](https://codeforces.com/problemset/problem/4/A)  ✅
+* [Petya and Strings (112A)](https://codeforces.com/problemset/problem/112/A)  ✅
+
 
 ## License
 
