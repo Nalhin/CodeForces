@@ -52,10 +52,6 @@ def save_problem(problem_path, problem_id):
 def save_test(base_path, data, problem_id):
     test_file = os.path.join(base_path, f"test_solution_{problem_id}.py")
     tf = open(test_file, "w")
-    for d in data:
-        print(d.id)
-        print(d.expected)
-        print(d.mock_input)
     tf.write(TEST_TEMPLATE_PATH.render(problem_id=problem_id, tests=data))
     tf.close()
 
