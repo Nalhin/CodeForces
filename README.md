@@ -1,9 +1,11 @@
+[![Test](https://github.com/Nalhin/CodeForces/workflows/Test/badge.svg?branch=master)](https://github.com/Nalhin/CodeForces/actions)
+[![Codecov](https://codecov.io/gh/Nalhin/codeforces/branch/master/graph/badge.svg)](https://codecov.io/gh/Nalhin/codeforces)
+
 # Code Forces
 
 ## Solved Problems - 1
 
-* [A. Watermelon (4A)](https://codeforces.com/problemset/problem/4/A)  ✅
-
+* [Watermelon (4A)](https://codeforces.com/problemset/problem/4/A)  ✅
 
 ## License
 

@@ -8,7 +8,7 @@ class Solution4ATest(unittest.TestCase):
     def setUp(self):
         self.solution = Solution4A()
 
-    def test_4A_example_1(self):
+    def test_4A_acceptance_1(self):
         mock_input = ['8']
         expected = 'YES'
 

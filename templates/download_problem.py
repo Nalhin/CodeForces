@@ -65,11 +65,12 @@ def save_test(base_path, data, problem_id):
 
 def insert_markdown_info(html_markdown, problem_id, url):
     q = pq(html_markdown.text)
-    title = q(".header .title").text()
+    title_without_id = q(".header .title").text().split(" ")[1:]
+    title = " ".join(title_without_id)
     file_content = [line for line in open(README_PATH)]
 
     writer = open(README_PATH, "w")
-    problem_section_line = 0
+    problem_section_line = math.inf
 
     for i, line in enumerate(file_content):
         if line.startswith(README_PROBLEMS):

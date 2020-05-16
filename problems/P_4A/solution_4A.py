@@ -7,7 +7,10 @@ class Solution4A:
         self.w = int(input())
 
     def solve(self):
-        self.result = "NO" if self.w % 2 == 1 else "YES"
+        if self.w == 2:
+            self.result = "NO"
+        else:
+            self.result = "NO" if self.w % 2 == 1 else "YES"
 
     def get_result(self):
         return self.result

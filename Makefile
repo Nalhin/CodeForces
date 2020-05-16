@@ -1,6 +1,6 @@
-.PHONY: download test
+.PHONY: download test test_coverage
 
-problem:
+get_problem:
 	python templates/download_problem.py
 
 test:
