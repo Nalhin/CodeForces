@@ -10,7 +10,9 @@ class Solution1117B:
         self.happiness_values = [int(i) for i in input().split(" ")]
 
     def solve(self):
-        largest, second_largest = self.happiness_values.sort(reverse=True)[:2]
+        largest, second_largest = sorted(self.happiness_values, reverse=True)[
+            :2
+        ]
 
         second_largest_use_count = self.m // (self.k + 1)
         largest_use_count = self.m - second_largest_use_count
