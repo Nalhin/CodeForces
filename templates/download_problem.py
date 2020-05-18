@@ -101,7 +101,7 @@ def insert_markdown_info(html_markdown, problem_id, url):
         if problem_section_line + 1 < i and line == "\n":
             writer.write(
                 f"* [{title} ({problem_id})]({url})"
-                f"[✅]({get_solution_folder(problem_id)}"
+                f"  [✅]({get_solution_folder(problem_id)}"
                 f"/{get_solution_file_name(problem_id)})\n"
             )
             problem_section_line = math.inf
