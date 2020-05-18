@@ -1,6 +1,6 @@
 class Solution${problem_id}:
     def __init__(self):
-        self.result = ''
+        self.result = ""
 
     def parse_input(self):
         pass

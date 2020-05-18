@@ -1,7 +1,7 @@
 class Solution4A:
     def __init__(self):
         self.w = None
-        self.result = ''
+        self.result = ""
 
     def parse_input(self):
         self.w = int(input())

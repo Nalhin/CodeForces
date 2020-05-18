@@ -1,7 +1,7 @@
 class Solution112A:
     def __init__(self):
         self.words = []
-        self.result = ''
+        self.result = ""
 
     def parse_input(self):
         self.words.append(input().lower())

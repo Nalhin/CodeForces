@@ -1,6 +1,6 @@
 class Solution750A:
     def __init__(self):
-        self.result = ''
+        self.result = ""
         self.k = 0
         self.n = 0
         self.result = 0

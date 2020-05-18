@@ -9,38 +9,38 @@ class TestSolution112A(unittest.TestCase):
         self.solution = Solution112A()
 
     def test_112A_acceptance_1(self):
-        mock_input = ['aaaa', 'aaaA']
-        expected = '0'
+        mock_input = ["aaaa", "aaaA"]
+        expected = "0"
 
-        with patch('builtins.input', side_effect=mock_input):
+        with patch("builtins.input", side_effect=mock_input):
             self.solution.parse_input()
             self.solution.solve()
             result = self.solution.get_result()
 
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
 
     def test_112A_acceptance_2(self):
-        mock_input = ['abs', 'Abz']
-        expected = '-1'
+        mock_input = ["abs", "Abz"]
+        expected = "-1"
 
-        with patch('builtins.input', side_effect=mock_input):
+        with patch("builtins.input", side_effect=mock_input):
             self.solution.parse_input()
             self.solution.solve()
             result = self.solution.get_result()
 
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
 
     def test_112A_acceptance_3(self):
-        mock_input = ['abcdefg', 'AbCdEfF']
-        expected = '1'
+        mock_input = ["abcdefg", "AbCdEfF"]
+        expected = "1"
 
-        with patch('builtins.input', side_effect=mock_input):
+        with patch("builtins.input", side_effect=mock_input):
             self.solution.parse_input()
             self.solution.solve()
             result = self.solution.get_result()
 
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -9,16 +9,16 @@ class TestSolution4A(unittest.TestCase):
         self.solution = Solution4A()
 
     def test_4A_acceptance_1(self):
-        mock_input = ['8']
-        expected = 'YES'
+        mock_input = ["8"]
+        expected = "YES"
 
-        with patch('builtins.input', side_effect=mock_input):
+        with patch("builtins.input", side_effect=mock_input):
             self.solution.parse_input()
             self.solution.solve()
             result = self.solution.get_result()
 
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

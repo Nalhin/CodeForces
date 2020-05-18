@@ -2,14 +2,16 @@ import math
 import os
 import requests
 
-from pyquery import PyQuery as pq
 from mako.template import Template
+from bs4 import BeautifulSoup
 
-TEMPLATE_PATH = './templates'
-SOLUTION_TEMPLATE_PATH = Template(filename=f'{TEMPLATE_PATH}/template_solution.txt', )
-TEST_TEMPLATE_PATH = Template(filename=f'{TEMPLATE_PATH}/template_test.txt')
-README_PATH = './README.md'
-README_PROBLEMS = '## Solved Problems'
+TEMPLATE_PATH = "./templates"
+SOLUTION_TEMPLATE_PATH = Template(
+    filename=f"{TEMPLATE_PATH}/template_solution.txt",
+)
+TEST_TEMPLATE_PATH = Template(filename=f"{TEMPLATE_PATH}/template_test.txt")
+README_PATH = "./README.md"
+README_PROBLEMS = "## Solved Problems"
 
 
 class Problem:
@@ -31,13 +33,24 @@ def get_test_file_name(problem_id):
     return f"test_solution_{problem_id}.py"
 
 
+def trim_new_lines(string):
+    return string.strip("\n")
+
+
 def parse_data(html_markdown):
-    q = pq(html_markdown.text)
-    tests = q(".sample-tests")
-    inputs = [i("pre").text() for i in tests.items(".input")]
-    results = [i("pre").text() for i in tests.items(".output")]
-    return [Problem(i + 1, str(input.split("\n")), result) for i, (input, result) in
-            enumerate(zip(inputs, results))]
+    soup = BeautifulSoup(html_markdown.text, "html.parser")
+    inputs = [
+        test.find("pre").text.strip("\n").split("\n")
+        for test in soup.find_all(class_="input")
+    ]
+    results = [
+        test.find("pre").text.strip("\n").replace("\n", "\\n")
+        for test in soup.find_all(class_="output")
+    ]
+    return [
+        Problem(i + 1, input, result)
+        for i, (input, result) in enumerate(zip(inputs, results))
+    ]
 
 
 def output_templates(problem_id, data):
@@ -55,7 +68,9 @@ def save_init(problem_path):
 
 
 def save_problem(problem_path, problem_id):
-    problem_file = os.path.join(problem_path, get_solution_file_name(problem_id))
+    problem_file = os.path.join(
+        problem_path, get_solution_file_name(problem_id)
+    )
     pf = open(problem_file, "w")
     pf.write(SOLUTION_TEMPLATE_PATH.render(problem_id=problem_id))
     pf.close()
@@ -69,8 +84,8 @@ def save_test(base_path, data, problem_id):
 
 
 def insert_markdown_info(html_markdown, problem_id, url):
-    q = pq(html_markdown.text)
-    title_without_id = q(".header .title").text().split(" ")[1:]
+    soup = BeautifulSoup(html_markdown.text, "html.parser")
+    title_without_id = soup.find(class_="title").text.split(" ")[1:]
     title = " ".join(title_without_id)
     file_content = [line for line in open(README_PATH)]
 
@@ -85,7 +100,8 @@ def insert_markdown_info(html_markdown, problem_id, url):
 
         if problem_section_line + 1 < i and line == "\n":
             writer.write(
-                f"* [{title} ({problem_id})]({url})  [✅]({get_solution_folder(problem_id)}/{get_solution_file_name(problem_id)})\n")
+                f"* [{title} ({problem_id})]({url})  [✅]({get_solution_folder(problem_id)}/{get_solution_file_name(problem_id)})\n"
+            )
             problem_section_line = math.inf
 
         writer.write(line)

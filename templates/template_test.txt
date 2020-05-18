@@ -11,16 +11,16 @@ class TestSolution${problem_id}(unittest.TestCase):
 
     def test_${problem_id}_acceptance_${test.id}(self):
         mock_input = ${test.mock_input}
-        expected = '${test.expected}'
+        expected = "${test.expected}"
 
-        with patch('builtins.input', side_effect=mock_input):
+        with patch("builtins.input", side_effect=mock_input):
             self.solution.parse_input()
             self.solution.solve()
             result = self.solution.get_result()
 
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
     % endfor
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

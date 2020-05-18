@@ -1,4 +1,4 @@
-.PHONY: download test test_coverage
+.PHONY: download test test_coverage format
 
 get_problem:
 	python templates/download_problem.py
@@ -8,3 +8,6 @@ test:
 
 test_coverage:
 	coverage report -m
+
+format:
+	poetry run black solutions
