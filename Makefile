@@ -4,10 +4,14 @@ get_problem:
 	python templates/download_problem.py
 
 test:
-	coverage run -m unittest discover
+	poetry run coverage run -m unittest discover
 
 test_coverage:
-	coverage report -m
+	poetry run coverage report -m
 
 format:
 	poetry run black solutions
+
+lint:|
+	poetry run flake8
+	poetry run black solutions --check

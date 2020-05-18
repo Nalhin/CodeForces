@@ -3,7 +3,7 @@
 
 # Code Forces
 
-## Solved Problems - 6
+## Solved Problems - 5
 
 * [Watermelon (4A)](https://codeforces.com/problemset/problem/4/A)  [✅](solutions/S_4A/solution_4A.py)
 * [Petya and Strings (112A)](https://codeforces.com/problemset/problem/112/A)  [✅](solutions/S_112A/solution_112A.py)

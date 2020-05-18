@@ -6,7 +6,6 @@ authors = []
 
 [tool.poetry.dependencies]
 python = "^3.8"
-flake8 = "^3.8.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.4"
@@ -15,9 +14,10 @@ requests = "^2.23.0"
 beautifulsoup4 = "^4.9.1"
 coverage = "^5.1"
 black = "^19.10b0"
+flake8 = "^3.8.1"
 
 [tool.black]
-line-length = 88
+line-length = 79
 
 [tool.coverage.run]
 omit = ["**test**","**__init__*"]
