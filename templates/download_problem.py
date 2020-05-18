@@ -86,6 +86,7 @@ def save_test(base_path, data, problem_id):
 def insert_markdown_info(html_markdown, problem_id, url):
     soup = BeautifulSoup(html_markdown.text, "html.parser")
     title_without_id = soup.find(class_="title").text.split(" ")[1:]
+    difficulty = soup.find(title="Difficulty").text.strip().replace("*", "")
     title = " ".join(title_without_id)
     file_content = [line for line in open(README_PATH)]
 
@@ -101,8 +102,9 @@ def insert_markdown_info(html_markdown, problem_id, url):
         if problem_section_line + 1 < i and line == "\n":
             writer.write(
                 f"* [{title} ({problem_id})]({url})"
-                f"  [✅]({get_solution_folder(problem_id)}"
-                f"/{get_solution_file_name(problem_id)})\n"
+                f" [✅]({get_solution_folder(problem_id)}"
+                f"/{get_solution_file_name(problem_id)})"
+                f" 🔥 {difficulty} \n"
             )
             problem_section_line = math.inf
 
