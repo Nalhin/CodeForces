@@ -3,7 +3,7 @@
 
 # Code Forces
 
-## Solved Problems - 11
+## Solved Problems - 12
 
 * [Watermelon (4A)](https://codeforces.com/problemset/problem/4/A)  [✅](solutions/S_4A/solution_4A.py) 🔥 800 
 * [Petya and Strings (112A)](https://codeforces.com/problemset/problem/112/A)  [✅](solutions/S_112A/solution_112A.py)  🔥 800
@@ -16,6 +16,7 @@
 * [Young Physicist (69A)](https://codeforces.com/problemset/problem/69/A) [✅](solutions/S_69A/solution_69A.py) 🔥 1000 
 * [Fancy Fence (270A)](https://codeforces.com/problemset/problem/270/A) [✅](solutions/S_270A/solution_270A.py) 🔥 1100 
 * [Taxi (158B)](https://codeforces.com/problemset/problem/158/B) [✅](solutions/S_158B/solution_158B.py) 🔥 1100 
+* [Double Cola (82A)](https://codeforces.com/problemset/problem/82/A) [✅](solutions/S_82A/solution_82A.py) 🔥 1100 
 
 ## License
 
