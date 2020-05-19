@@ -3,7 +3,7 @@
 
 # Code Forces
 
-## Solved Problems - 7
+## Solved Problems - 8
 
 * [Watermelon (4A)](https://codeforces.com/problemset/problem/4/A)  [✅](solutions/S_4A/solution_4A.py) 🔥 800 
 * [Petya and Strings (112A)](https://codeforces.com/problemset/problem/112/A)  [✅](solutions/S_112A/solution_112A.py)  🔥 800
@@ -12,6 +12,7 @@
 * [New Year and Hurry (750A)](https://codeforces.com/problemset/problem/750/A)  [✅](solutions/S_750A/solution_750A.py) 🔥 800 
 * [Word Capitalization (281A)](https://codeforces.com/problemset/problem/281/A) [✅](solutions/S_281A/solution_281A.py) 🔥 800 
 * [Emotes (1117B)](https://codeforces.com/problemset/problem/1117/B)  [✅](solutions/S_1117B/solution_1117B.py)  🔥 1000
+* [Lucky Sum of Digits (109A)](https://codeforces.com/problemset/problem/109/A) [✅](solutions/S_109A/solution_109A.py) 🔥 1000 
 
 ## License
 
