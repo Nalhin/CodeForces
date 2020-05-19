@@ -1,16 +1,16 @@
 class Solution69A:
     def __init__(self):
         self.result = ""
-        self.mem = [0, 0, 0]
+        self.forces = [0, 0, 0]
 
     def parse_input(self):
         n = int(input())
         for _ in range(n):
             for i, num in enumerate(input().split(" ")):
-                self.mem[i] += int(num)
+                self.forces[i] += int(num)
 
     def solve(self):
-        all_match = all(v == 0 for v in self.mem)
+        all_match = all(v == 0 for v in self.forces)
         self.result = "YES" if all_match else "NO"
 
     def get_result(self):

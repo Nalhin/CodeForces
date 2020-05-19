@@ -5,6 +5,7 @@ import requests
 from mako.template import Template
 from bs4 import BeautifulSoup
 
+
 TEMPLATE_PATH = "./templates"
 SOLUTION_TEMPLATE_PATH = Template(
     filename=f"{TEMPLATE_PATH}/template_solution.txt",
@@ -37,8 +38,14 @@ def trim_new_lines(string):
     return string.strip("\n")
 
 
+def replace_br_with_new_lines(soup):
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+
+
 def parse_data(html_markdown):
     soup = BeautifulSoup(html_markdown.text, "html.parser")
+    replace_br_with_new_lines(soup)
     inputs = [
         test.find("pre").text.strip("\n").split("\n")
         for test in soup.find_all(class_="input")
