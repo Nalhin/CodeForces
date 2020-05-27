@@ -3,7 +3,7 @@
 
 # Code Forces
 
-## Solved Problems - 13
+## Solved Problems - 14
 
 * [Watermelon (4A)](https://codeforces.com/problemset/problem/4/A)  [✅](solutions/S_4A/solution_4A.py) 🔥 800 
 * [Petya and Strings (112A)](https://codeforces.com/problemset/problem/112/A)  [✅](solutions/S_112A/solution_112A.py)  🔥 800
@@ -18,6 +18,7 @@
 * [Taxi (158B)](https://codeforces.com/problemset/problem/158/B) [✅](solutions/S_158B/solution_158B.py) 🔥 1100 
 * [Double Cola (82A)](https://codeforces.com/problemset/problem/82/A) [✅](solutions/S_82A/solution_82A.py) 🔥 1100 
 * [A and B and Compilation Errors (519B)](https://codeforces.com/problemset/problem/519/B) [✅](solutions/S_519B/solution_519B.py) 🔥 1100 
+* [Laptops (456A)](https://codeforces.com/problemset/problem/456/A) [✅](solutions/S_456A/solution_456A.py) 🔥 1100 
 
 ## License
 
