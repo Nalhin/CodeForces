@@ -1,0 +1,20 @@
+name: Continuous Integration
+on: [ push ]
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: make install
+      - name: Run tests
+        run: make run_tests_coverage
+      - name: Upload code test coverage reports
+        uses: codecov/codecov-action@v1.0.13
+        with:
+          file: coverage/cov.xml
