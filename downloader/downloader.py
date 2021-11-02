@@ -38,11 +38,11 @@ def main(url: str) -> None:
 
     for i, content in enumerate(inputs):
         with open(os.path.join(problem_folder, tests_folder, f"{i}.in.txt"), "w") as f:
-            f.write(content.text.strip(os.linesep))
+            f.write(content.text)
 
     for i, content in enumerate(outputs):
         with open(os.path.join(problem_folder, tests_folder, f"{i}.out.txt"), "w") as f:
-            f.write(content.text.strip(os.linesep))
+            f.write(content.text)
 
     with open(os.path.join(problem_folder, problem_name + ".py"), "w") as f:
         f.write(problem_template.render())
