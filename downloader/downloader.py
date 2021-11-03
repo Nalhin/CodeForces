@@ -31,7 +31,7 @@ def main(url: str) -> None:
 
     tests_folder = "tests"
 
-    problem_folder = os.path.join(os.path.dirname(__file__), '..', 'problems', folder_name)
+    problem_folder = os.path.join(os.path.dirname(__file__), '..', 'problems', folder_name, group)
 
     path = Path(os.path.join(problem_folder, tests_folder))
     path.mkdir(exist_ok=True, parents=True)
@@ -51,4 +51,7 @@ def main(url: str) -> None:
         f.write(test_template.render(problem_name=problem_name))
 
     with open(os.path.join(problem_folder, "__init__.py"), "w") as f:
+        f.write("")
+
+    with open(os.path.join(os.path.dirname(__file__), '..', 'problems', folder_name, "__init__.py"), "w") as f:
         f.write("")
