@@ -3,7 +3,7 @@
 """
 
 
-def main()->None:
+def main() -> None:
     n = int(input())
 
 
