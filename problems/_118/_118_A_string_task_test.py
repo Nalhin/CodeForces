@@ -4,7 +4,7 @@ from unittest.mock import patch
 import pytest
 
 from test.utils import load_test_files
-from ._71_A_way_too_long_words import main
+from ._118_A_string_task import main
 
 test_data = load_test_files(__file__)
 
