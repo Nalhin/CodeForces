@@ -3,7 +3,7 @@
 """
 
 
-def main():
+def main() -> None:
     n = int(input())
     for _ in range(n):
         word = input()

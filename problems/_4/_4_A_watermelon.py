@@ -3,7 +3,7 @@
 """
 
 
-def main():
+def main() -> None:
     weight = int(input())
     print("YES" if (weight > 3 and weight % 2 == 0) else "NO")
 

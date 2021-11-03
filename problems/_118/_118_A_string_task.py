@@ -5,7 +5,7 @@
 VOWELS = {'a', 'o', 'y', 'e', 'u', 'i'}
 
 
-def main():
+def main() -> None:
     word = input()
     parsed_letters = [f".{letter.lower()}" for letter in word if letter.lower() not in VOWELS]
     print("".join(parsed_letters))

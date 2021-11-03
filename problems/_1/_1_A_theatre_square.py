@@ -4,7 +4,7 @@
 from math import ceil
 
 
-def main():
+def main() -> None:
     n, m, a = [int(i) for i in input().split()]
 
     print(ceil(n / a) * ceil(m / a))

@@ -3,7 +3,7 @@
 """
 
 
-def main():
+def main() -> None:
     n = int(input())
 
     sums = [0] * 3

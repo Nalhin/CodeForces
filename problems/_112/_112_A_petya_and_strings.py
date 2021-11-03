@@ -3,7 +3,7 @@
 """
 
 
-def main():
+def main() -> None:
     str1 = input().lower()
     str2 = input().lower()
 

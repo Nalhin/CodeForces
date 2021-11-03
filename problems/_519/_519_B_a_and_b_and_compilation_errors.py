@@ -4,7 +4,7 @@
 from collections import Counter
 
 
-def main():
+def main() -> None:
     _ = input()
 
     first_errors = [int(e) for e in input().split()]
